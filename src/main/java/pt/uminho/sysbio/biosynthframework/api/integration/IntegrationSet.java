@@ -1,4 +1,4 @@
-package pt.uminho.sysbio.biosynthframework.integration;
+package pt.uminho.sysbio.biosynthframework.api.integration;
 
 public class IntegrationSet {
 

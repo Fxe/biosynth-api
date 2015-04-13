@@ -1,4 +1,4 @@
-package pt.uminho.sysbio.biosynthframework;
+package pt.uminho.sysbio.biosynthframework.api;
 
 import retrofit.RestAdapter;
 
@@ -10,12 +10,12 @@ public class IntegrationServiceFactory {
 		return this;
 	}
 	
-	public IntegrationApi build() {
+	public IntegrationService build() {
 		RestAdapter restAdapter = new RestAdapter.Builder()
 			.setEndpoint(endPoint)
 			.build();
 
-		IntegrationApi api = restAdapter.create(IntegrationApi.class);
+		IntegrationService api = restAdapter.create(IntegrationService.class);
 		return api;
 	}
 }

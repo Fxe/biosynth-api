@@ -1,4 +1,4 @@
-package pt.uminho.sysbio.biosynthframework;
+package pt.uminho.sysbio.biosynthframework.api;
 
 import java.util.List;
 import java.util.Map;
@@ -8,7 +8,7 @@ import retrofit.http.GET;
 import retrofit.http.Path;
 import retrofit.http.Query;
 
-public interface IntegrationApi {
+public interface IntegrationService {
 	//
 	@GET("/integration/explore")
 	public List<Map<String, Object>> listAllIntegrationSets();

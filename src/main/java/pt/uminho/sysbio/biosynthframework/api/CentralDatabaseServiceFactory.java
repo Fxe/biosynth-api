@@ -1,4 +1,4 @@
-package pt.uminho.sysbio.biosynthframework;
+package pt.uminho.sysbio.biosynthframework.api;
 
 import retrofit.RestAdapter;
 
