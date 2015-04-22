@@ -39,8 +39,8 @@ public class TestCentralDatabaseService {
 				1647125, 1644749, 1645425, 1635671};
 		for (long rxnId : equalSig) {
 			Map<String, Object> o = service.getDatabaseReactionEntity("LigandReaction", "id:" + rxnId);
-			String entry = JsonMapUtils.getString("entry", o);
-			String equation = JsonMapUtils.getString("equation", JsonMapUtils.getMap("properties", o));
+			String entry = JsonMapUtils.getString(o, "entry");
+			String equation = JsonMapUtils.getString(JsonMapUtils.getMap("properties", o), "equation");
 			
 			System.out.println(entry);
 			System.out.println(equation);

@@ -4,8 +4,16 @@ import java.util.List;
 import java.util.Map;
 
 public class JsonMapUtils {
-	public static String getString(String key, Map<String, Object> map) {
+	public static String getString(Map<String, Object> map, String key) {
 		return (String) map.get(key);
+	}
+	
+	public static String getString(Map<String, Object> map, String...keys) {
+		Map<String, Object> o = map;
+		for (int i = 0; i < keys.length - 1; i++) {
+			o = getMap(keys[i], o);
+		}
+		return getString(o, keys[keys.length - 1]);
 	}
 	
 	public static Long getLong(String key, Map<String, Object> map) {
@@ -21,4 +29,6 @@ public class JsonMapUtils {
 	public static List<Object> getList(String key, Map<String, Object> map) {
 		return (List<Object>) map.get(key);
 	}
+
+
 }
