@@ -13,6 +13,12 @@ public interface IntegrationService {
 	@GET("/integration/explore")
 	public List<Map<String, Object>> listAllIntegrationSets();
 	
+	@GET("/integration/explore/{itg}/cpd")
+	public Map<String, Object> listAllMetaboliteClustersByIntegrationSetId(@Path("itg") String itg);
+	
+	@GET("/integration/explore/{itg}/rxn")
+	public Map<String, Object> listAllReactionClustersByIntegrationSetId(@Path("itg") String itg);
+	
 	//http://darwin.di.uminho.pt:8080/biosynth-web-biobase//integration/explore/cpd/findByReferenceId?referenceId=1324007
 	@GET("/integration/explore/cpd/findByReferenceId")
 	public Map<Long, Set<Long>> findByReferenceId(@Query("referenceId") long referenceId);

@@ -11,6 +11,9 @@ public interface CentralDatabaseService {
 	@GET("/central/cpd/get/{label}/{id}")
 	public Map<String, Object> getDatabaseMetaboliteEntity(@Path("label") String database, @Path("id") String id);
 	
+	@GET("/central/cpd/get/{label}/{id}/{property}")
+	public Map<String, Object> getDatabaseMetaboliteEntityProperty(@Path("label") String database, @Path("id") String id, @Path("property") String property);
+	
 	@GET("/central/rxn/get/{label}/{id}")
 	public Map<String, Object> getDatabaseReactionEntity(@Path("label") String database, @Path("id") String id);
 	
