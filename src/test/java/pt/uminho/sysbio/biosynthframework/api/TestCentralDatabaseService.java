@@ -1,4 +1,4 @@
-package CentralDatabaseService;
+package pt.uminho.sysbio.biosynthframework.api;
 
 import static org.junit.Assert.fail;
 
@@ -65,8 +65,8 @@ public class TestCentralDatabaseService {
 //	  
 //	  cb.
 	  
-//	  Object o2 = service.uploadMetabolicModelSpecieReferences("Ec_core", typedFile);
-//	  System.out.println(o2);
+	  Object o2 = service.uploadMetabolicModelSpecieReferences("Ec_core", typedFile);
+	  System.out.println(o2);
 	}
 	
 //	@Test

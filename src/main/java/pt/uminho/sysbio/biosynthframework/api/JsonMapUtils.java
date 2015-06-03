@@ -16,6 +16,10 @@ public class JsonMapUtils {
 		return getString(o, keys[keys.length - 1]);
 	}
 	
+  public static double getDouble(String key, Map<String, Object> map) {
+    return (double) map.get(key);
+  }
+	
 	public static Long getLong(String key, Map<String, Object> map) {
 		return Math.round( (Double) map.get(key));
 	}
@@ -29,6 +33,8 @@ public class JsonMapUtils {
 	public static List<Object> getList(String key, Map<String, Object> map) {
 		return (List<Object>) map.get(key);
 	}
+
+
 
 
 }
