@@ -14,11 +14,11 @@
   <distributionManagement>
     <repository>
       <id>watson</id>
-      <url>http://193.137.11.210:8081/nexus/content/repositories/biosystems-releases</url>
+      <url>http://193.137.11.210/nexus/content/repositories/biosystems-releases</url>
     </repository>
     <snapshotRepository>
       <id>watson</id>
-      <url>http://193.137.11.210:8081/nexus/content/repositories/biosystems-snapshots</url>
+      <url>http://193.137.11.210/nexus/content/repositories/biosystems-snapshots</url>
     </snapshotRepository>
   </distributionManagement>
 
@@ -82,7 +82,7 @@
         <extensions>true</extensions>
         <configuration>
           <serverId>local-nexus</serverId>
-          <nexusUrl>http://192.168.1.99:8081/nexus/</nexusUrl>          
+          <nexusUrl>http://193.137.11.210/nexus/</nexusUrl>          
         </configuration>
       </plugin>
     </plugins>
