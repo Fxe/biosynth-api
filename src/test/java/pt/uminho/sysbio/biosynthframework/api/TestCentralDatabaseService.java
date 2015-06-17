@@ -18,8 +18,8 @@ import retrofit.mime.TypedFile;
 
 public class TestCentralDatabaseService {
 
-//	private static String ENDPOINT = "http://darwin.di.uminho.pt:8080/biosynth-web-biobase/";
-	private static String ENDPOINT = "http://localhost:8080/biosynth-web-biobase/";
+	private static String ENDPOINT = "http://darwin.di.uminho.pt:8080/biosynth-web-biobase/";
+//	private static String ENDPOINT = "http://localhost:8080/biosynth-web-biobase/";
 	private static CentralDatabaseService service;
 	
 	
@@ -68,6 +68,32 @@ public class TestCentralDatabaseService {
 	  Object o2 = service.uploadMetabolicModelSpecieReferences("Ec_core", typedFile);
 	  System.out.println(o2);
 	}
+	
+	 @Test
+	  public void gg2() {
+	    Object o1 = service.deleteAllMetabolicModelMetaboliteMap("Ec_core");
+	    System.out.println(o1);
+	    TypedFile typedFile = new TypedFile("multipart/form-data", new File("D:/var/ec_core_mcpd_map.tsv"));
+//	    Callback<Object> cb = new Callback<Object>() {
+//	      
+//	      @Override
+//	      public void success(Object arg0, Response response) {
+//	        System.out.println(arg0);
+//	        System.out.println(response);
+//	      }
+//	      
+//	      @Override
+//	      public void failure(RetrofitError error) {
+//	        System.out.println(error);
+//	      }
+//	    };
+//	    service.uploadMetabolicModelSpecieReferences("Ec_core", typedFile, cb);
+//	    
+//	    cb.
+	    
+	    Object o2 = service.uploadMetabolicModelMetaboliteMap("Ec_core", typedFile);
+	    System.out.println(o2);
+	  }
 	
 //	@Test
 //	public void test() {

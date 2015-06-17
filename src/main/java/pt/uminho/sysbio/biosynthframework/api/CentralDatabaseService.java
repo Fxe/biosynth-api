@@ -38,7 +38,7 @@ public interface CentralDatabaseService {
   public Map<String, Object> deleteAllMetabolicModelMetaboliteReferences(@Path("model") String model);
 	
 	@DELETE("/metabolic/model/mmd/{model}/cpd/clear")
-  public Map<String, Object> deleteAllMetabolicModelMetaboliteMap(@Path("model") String model);
+  public Object deleteAllMetabolicModelMetaboliteMap(@Path("model") String model);
 	
 	@DELETE("/metabolic/model/mmd/{model}/rxn/ref/clear")
   public Map<String, Object> deleteAllMetabolicModelReactionReferences(@Path("model") String model);
@@ -52,6 +52,10 @@ public interface CentralDatabaseService {
 	@Multipart
 	@POST("/metabolic/model/mmd/{model}/spi/ref/upload")
 	public Object uploadMetabolicModelSpecieReferences(@Path("model") String model, @Part("file") TypedFile file);
+	
+	@Multipart
+  @POST("/metabolic/model/mmd/{model}/cpd/upload")
+  public Object uploadMetabolicModelMetaboliteMap(@Path("model") String model, @Part("file") TypedFile file);
 	
 	@GET("/metabolic/model/mmd/{model}/spi/{id}")
 	public Map<String, Object> getModelSpecieEntity(@Path("model") String model, @Path("id") String id);
